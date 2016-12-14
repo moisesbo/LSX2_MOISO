@@ -1,0 +1,204 @@
+    1  history
+    2  ip -4 addr 
+    3  netstat -latunp
+    4  #CONEXIONES ACTIVAS, PUERTOS
+    5  history
+    6  #CONEXIONES ACTIVAS, PUERTO 22
+    7  netstat -latunp | grep 22
+    8  #COPIAR HISTORY CON UN FORMATOS DE NOMBRE SOLAMENTE
+    9  history > history/history-$HOSTNAME
+   10  history > ./history-$HOSTNAME
+   11  LS
+   12  ls
+   13  #VER ARBOL DE DIRECTORIOS , DE FORMA GRAFICA
+   14  tree
+   15  history
+   16  #CREAR ARCHIVO HISTORY CON FORMATO DE HORA Y FECHA ACTUAL
+   17  history > history/history-$HOSTNAME`date +%Y%m%d`
+   18  history > ./history-$HOSTNAME`date +%Y%m%d`
+   19  LS
+   20  ls
+   21  #ARCHIVO EN EL CUAL DEFINO, EXTENSIONES O TIPOS DE ARCHIVOS QUE NO QUIERO DAR SEGUIMIENTO
+   22  echo "*~" > .gitignore 
+   23  echo "*.swp" >> .gitignore 
+   24  #VER ARCHIVO QUE GUARDA GLOBAL SOBRE LA QUE SE RIGE TODAS LAS ACCIONES DE TRACKING QUE REALIZAMOS
+   25  cat .gitconfig 
+   26  git status
+   27  git init
+   28  #SE HA EMPEZADOS UN TRACKING DE CAMBIOS SOBRE ESTE DIRECTORIO
+   29  cat .gitconfig 
+   30  ls
+   31  ls -a
+   32  git status 
+   33   git add .gitignore 
+   34  #VAMOS A AGREGAR LAS ULTIMAS ACTUALIZACIONES REALIZADAS
+   35  #PRIMER COMMIT L2
+   36  git commit -m "Inicio del repositorio de nivel 2"
+   37  gitk
+   38  ls
+   39  mkdir registrohistory
+   40  cp * registrohistory/
+   41  ls
+   42  cd registrohistory/
+   43  ls
+   44  cd ..
+   45  rm history-sugarcrm
+   46  rm history-sugarcrm20161214 
+   47  ls
+   48  cd registrohistory/
+   49  # APLIQUE TODOS LOS CAMBIOS NECESARIOS
+   50  git commit -m "SEGUNDO COMMIT"
+   51  git add .
+   52  git status
+   53  git commit -m "SEGUNDO COMMIT"
+   54  #VER TODOS LOS COMMITS REALIZADOS HASTA EL MOMENTO
+   55  git log
+   56  git push origin master 
+   57  git git remote -v
+   58  git remote -v
+   59  cd 
+   60  cd History/
+   61  ls
+   62  git remote -v
+   63  cd ..
+   64  cd Proyecto-de-Programacion/
+   65  ls
+   66  git remote -v
+   67  cd
+   68  cd History/
+   69  git remote add origin git@github.com:moisesbo/LSX2_MOISO.git
+   70  git remote -v
+   71  git push origin master 
+   72  git remote add originhistory git@github.com:moisesbo/LSX2_MOISO.git  (paste)
+   73  git remote add originhistory git@github.com:moisesbo/LSX2_MOISO.git 
+   74  git remote -v
+   75  git push originhistory master
+   76  ls
+   77  cp registrohistory/ ../Proyecto-de-Programacion/
+   78  cd
+   79  ls
+   80  cd Proyecto-de-Programacion/
+   81  CLEAR
+   82  clear
+   83  ls
+   84  cd ..
+   85  mv History/ Proyecto-de-Programacion/
+   86  ls
+   87  cd Proyecto-de-Programacion/
+   88  ls
+   89  git status
+   90  git add .
+   91  git add --all
+   92  git commit -m "SCRIPT - Se ejecuta y modifica por primera vez el gnuplot para que me genere la grafica en .png"
+   93  git push origin master 
+   94  ls
+   95  cd History/
+   96  LS
+   97  ls
+   98  cd registrohistory/
+   99  ls
+  100  CD ..
+  101  cd ..
+  102  rm -rf History/
+  103  git status
+  104  git add --all
+  105  git commit -m "HISTORY - Empezamos a validar comandos del history"
+  106  ls
+  107  mkdir VALIDACIONHISTORY
+  108  cd VALIDACIONHISTORY/
+  109  history > ./history-$HOSTNAME-`date +%Y%m%d`
+  110  ls
+  111  cat history-sugarcrm-20161214 
+  112  cd ..
+  113  git status
+  114  git add .
+  115  git commit -m "HISTORY - Empezamos a validar comandos del history"
+  116  git log
+  117  git remote add origin git@github.com:moisesbo/LSX2_MOISO.git
+  118  git remote rename origin upstream
+  119  git push origin master 
+  120  cd VALIDACIONHISTORY/
+  121  ls
+  122  #COMANDO PARA COPIAR AL EQUIPO LOCAL UN REPO REMOTO
+  123  #git clone https://github.com/emvarg/LXS2_evb.git repoProfe
+  124  #SI SE HAN HECHO CAMBIOS EN EL SERVER REMOTO,LOS ACTUALIZO CON PUPP
+  125  #*PULL
+  126  #git pull origin master
+  127  echo $OLDPWD
+  128  #COMANDO GLOBAL UTIL PARA RETORNAR A DIR PREVIOS
+  129  echo $UID
+  130  echo $GID
+  131  #PUERTOS QUE ESTAN ESCUCHANDO
+  132  netstat -latun | grep LISTEN
+  133  ls
+  134  #VAMOS A TRABAJAR SOBRE UN ARCHIVO DE REPORTE INFORMACION ACERCA DE: NOMBRE USUARIO, HOSTNAME, PUERTOS ABIERTOS, Y VARIABLES DE ENTORNO
+  135  ./reporte.sh
+  136  #VAMOS A DARLE PERMISOS DE EJECUCION
+  137  chmod 750 reporte.sh 
+  138  ./reporte.sh
+  139  ls
+  140  les reporte-20161214.log 
+  141  less reporte-20161214.log 
+  142  cd ..
+  143  echo "*.log" >> .gitignore
+  144  #EL COMANDO ANTERIOR , PERMITE IGNORAR Y ALMACENAR ARCHIVO INNCESARIOS COQUE TERMINAN EN .LOG
+  145  cat .gitignore
+  146  #CONCEPTOS BASICOS DE VARIABLES
+  147  var1=casa
+  148  var2=gato
+  149  echo $HOSTNAME
+  150  #ESO FUE UNA VARAIBLE GLOBAL AL BASH
+  151  echo $var1
+  152  echo $var2
+  153  #ESO ME IMPRIMIO LAS VARAIBLES DEFINIDAS DESDE ESTA LINEA DE COMANDOS
+  154  #CREAMOS LA FAMOSA CARPETA MISC
+  155  mkdir misc
+  156   dmesg 
+  157  #EL MESG ME TIRA LA SALIDA ESTANDAR DEL KERNET
+  158  #VAMOS A FILTRAR UN POCO ESA SALIDA
+  159  dmesg | wc
+  160  #CUENTA DE LINEAS
+  161  #NO CARGA TODO EN MEMORIA , SOLO NECESARIO
+  162  dmesg | less
+  163  #ULTIMAS LINEAS
+  164  dmesg | tail
+  165  #CUENTA LAS ULTIMAS LINEAS
+  166  dmesg | tail |wc
+  167  #CUANTA LAS ULTIMAS 20
+  168  dmesg | head -n 20| wc
+  169  var2=perrito
+  170  dmesg | head -n 20| wc > salida-de-$var2
+  171  ls
+  172  mv salida-de-perrito /misc
+  173  ls
+  174  cd misc/
+  175  ls
+  176  cd ..
+  177  ls
+  178  cd misc/
+  179  ls
+  180  dmesg | head -n 20| wc > salida-de-$var2
+  181  ls
+  182  less salida-de-perrito 
+  183  #>> PARA NO SOBRESCRIBIR DATOS YA EXISTENTES
+  184   ifconfig -a >> file-casa-perro
+  185  ls
+  186   ifconfig -a >> salida-de-$var2
+  187  less salida-de-perrito 
+  188  rm file-casa-perro 
+  189  ls
+  190  var2=perrote
+  191  echo $var2
+  192  unset var2
+  193  echo $var2
+  194  #ME VOLÉ EL CONTENIDO DE VAR2
+  195  env
+  196  #Variables de entrono
+  197  set
+  198  #SOLO OBTENGO EL DATOS ESPECIFICO QUE REQUIERO: HOSTANAME
+  199  git status
+  200  #VAMOS A GUARDAR LOS COMANDOS RELEVANTES DE LA SESION
+  201  git add .
+  202  cd ..
+  203  ls
+  204  history > VALIDACIONHISTORY/history-$HOSTNAME-`date +%Y%m%d`+1
