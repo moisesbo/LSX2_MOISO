@@ -1,0 +1,33 @@
+    1  history
+    2  #variables.sh tiene dos opciones ingrasar la salida estandar al archivo out.log o la de error a error.log
+    3  cd 
+    4  cd Proyecto-de-Programacion/
+    5  ls
+    6  cd src/
+    7  ls
+    8  cd ..
+    9  cd misc/
+   10  ls
+   11  less dhcpd.conf 
+   12  #EL ARCHIVO ANTERIOR IMPRIME UN ARCHIVO QUEMUESTRA EL DIRECCIONAMIENTO DINAMICO BRINDADO A UN AMBITO DE RED
+   13  grep "#" dhcpd.conf 
+   14  grep  -v "#" dhcpd.conf | grep fixed
+   15  grep  -v "#" dhcpd.conf
+   16   grep  -v "#" dhcpd.conf | sed '/^\s*$/d'
+   17  grep  -v "#" dhcpd.conf
+   18  grep  -v "#" dhcpd.conf | sed '/^\s*$/d'
+   19  grep  -v "#" dhcpd.conf | sed '/^\s*$/d' | grep fixed
+   20   grep  -v "#" dhcpd.conf | sed '/^\s*$/d' | grep fixed | cut -d " " -f2
+   21  grep  -v "#" dhcpd.conf | sed '/^\s*$/d' | grep fixed
+   22  grep  -v "#" dhcpd.conf | sed '/^\s*$/d' | grep fixed | cut -d " " -f2
+   23  grep  -v "#" dhcpd.conf | sed '/^\s*$/d' | grep fixed | cut -d " " -f2 | sed 's/;//' | cut -d "." -f4 > clientes_ocupados.log
+   24  grep  -v "#" dhcpd.conf | sed '/^\s*$/d' | grep fixed | cut -d " " -f2 | sed 's/;//' | cut -d "." -f4 
+   25  less clientes_ocupados.log
+   26  history > VALIDACIONHISTORY/history-$HOSTNAME-`date +%Y%m%d`+3
+   27  cd ..
+   28  history > VALIDACIONHISTORY/history-$HOSTNAME-`date +%Y%m%d`+2
+   29  git status
+   30  git add .
+   31  git push origin master 
+   32  ls
+   33  history > VALIDACIONHISTORY/history-$HOSTNAME-`date +%Y%m%d`+3
