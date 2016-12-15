@@ -1,0 +1,25 @@
+= Git cheat sheet / Command reference guide
+Explicar que hace cada comando
+
+git add:       Despues de haber inicializado la aplicacion para que este la tanto de un directorio especifico, todos los cambios realizados seran agregados al 
+repo digitado add, de manera contraria, se mantendra en el estado previo
+
+git commit:     Es un hito en el tiempo para un proyecto especifico, sirve para identificar la fases y cambios significativos realizados sobre el proyecto, es debe ser muy descriptivo a la hora de comentar el proposito del cambio 
+
+git push:       Una vez ya hemos indicado cual es el repositorio remoto , con ssh o https, podemos respaldar nuestro repo local hacia uno de un servidor remoto.
+
+git show --stat <hash del commit>: Me brinda informacion especifica del cambio ligado al Hash: autor, fecha, archivos y inserciones realizadas previo a la ejecucion de ese commit 
+
+git log:        Muestra secuencialmente los cambios realizados en el proyecto, gracias a la descripcion de los commit, con fecha y autor del cambio
+
+git diff:		Me permite diferenciar los cambios realizados antes de hacer un commit, difencia entre el working area y el staging area
+
+git status:      Nos indica si hay cambios en el directorio, o si no hay nada que sea agregable al repo.
+
+git init:        Sirve para demarcar los directorios a los cuales se desea dar un control sobre cambios
+
+git clone:       Los repositorios que se encuentra en remoto, y desde la pagina de github pueden ser descargados , a un entorno local para seguir trabajandolos.
+
+git remote:      Me muestra los nombres de los repositorios que tengo identificados como remotos, el nombre que se le dio , sin mas detalles
+
+git remote -v:   Me muestra los nombres de los repositorios que tengo identificados como remotos, el nombre que se le dio y la ruta a la cual sera cargados los repos locales.

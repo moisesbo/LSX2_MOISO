@@ -1,0 +1,12 @@
+Archivo y directorios contenidos:
+
+
+ProyectoLVM: En este proyecto se tomaron fotos, debido a que el gestor de maquinas virtuales no me permitio almacenar las instantaneas mas que las de la instalacion del SO, 
+debido a la arquitectura del equipo HOST se tuvo que instalar la version 6.8 Final release de CentOS, para la practica de history y el proyecto de progra si se utilizo un servidor
+remoto con el que cuento. Se consolida en un solo documento para una mayor comprension del proceso paso a paso.
+
+tarea de git.txt: Tiene la tarea de los comandos escenciales para mantener un control de cambios de los proyectos.
+
+VALIDACIONHISTORY: Contiene los historial comandos utilizados durante cada sesión del curso y descripciones de la funcionalidad de cada uno 
+
+ProyectoPROGRA: Proyecto final de lectura de archivos, formateo con tuberias , bucles for , variables y elementos escenciales de programación.
