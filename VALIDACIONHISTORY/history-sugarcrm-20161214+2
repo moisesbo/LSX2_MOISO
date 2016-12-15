@@ -1,192 +1,60 @@
-    1  ls
-    2  sudo visudo
-    3  ls -l .bash_history
-    4  cd ..
-    5  ls -l .bash_history
-    6  cd 
-    7  ls -l .bash_history
-    8  #DIRECTORIO DEL BACH
-    9  #*HISTORY
-   10  ip -4 addr 
-   11  #INFRMACION DE LA ASIGNACION IP DEL HOST ACTUAL
-   12  #ME PERMITE VER EL CONTENIDO DE LA RUTA PRINCIPAL DEL SERVICIO WEB
-   13  ls /var/www/html/
-   14  #ssh user1@10.124.18.28 -  ESTO FUE UN ACCESO SSH A UN EQUIPO DENTRO DEL MISMO RANGO DE RED
-   15  ps aux
-   16  #ENTRECOMILLADO SESSION
-   17  #TIPOS
-   18  # "" : SE DEFINE UN STRING
-   19  # `` : UTILIZO LA SALIDA DE UN COMANDO
-   20  # '' : USO EL SIGNIFICADO LITERAL
-   21  $VAR1=ESO
-   22  VAR1=ESO
-   23  echo '$VAR1 QUE ME DICE '
-   24  #SALIDA $VAR1 QUE ME DICE
-   25  cd Proyecto-de-Programacion/
-   26  CD VALIDACIONHISTORY/
-   27  ls
-   28  cd misc/
-   29  mkdir tmp1
-   30  echo  ls *.log`
-   31  echo `ls *.log`
-   32  mv `ls *.log` tmp1/
-   33  ls
-   34  tree
-   35  ls *.log
-   36  ls tmp1/*.log
-   37  mv auth.log  error.log  out.log tmp1/
-   38   echo hola mundo
-   39  mundo
-   40  #NO HAY PROBLEMA , SI SALTO DE LINEA, EL ECHO SIEMPRE VA A ESPERAR UN " DE CIERRE
-   41  echo "hola
-mundo"
-   42  history 
-   43  ls
-   44  #VAMOS A TRABAJAR SOBRE EL ARCHIVO DHCPD
-   45  cat dhcpd.conf 
-   46  grep host dhcpd.conf
-   47  #ESTE ME FILTRO SOLO LA INFO RELATIVA A LOS HOST
-   48  grep host *
-   49  grep host -R *
-   50  grep host * 2> /tmp/error.log
-   51  ls
-   52  cd ..
-   53  cd
-   54  cd /tmp/error.log 
-   55  vi /tmp/error.log 
-   56  cat /tmp/error.log
-   57   grep host -R * 2> /tmp/error.log
-   58  cat /tmp/error.log
-   59  #NO ME MOSTRARA NADA EN ERROR DEBIDO AQUE LA SALIDA NO ME DA ERROR
-   60  find . 
-   61  CD p
-   62  cd Proyecto-de-Programacion/
-   63  cd misc/
-   64  find . 
-   65  # FIND ME BUSCA TODO LO QUE TENGO EN EL DIRECTORIO ACTUAL
-   66  grep host `find .`
-   67  LS
-   68  ls
-   69  #ME BUSCO TODO RELACIONADO A HOST EN EL DIRECTORIO ACTUAL
-   70  find . | grep host
-   71  grep host `find .` 2> /tmp/error.log
-   72  cat /tmp/error.log
-   73  cd tmp1/
-   74  ls
-   75  cd ..
-   76  rm -r tmp1/
-   77  git status 
-   78  echo 4\*\2\>10\ es\ falso
-   79  #EL COMANDO ANTERIOR ME PERMITE ESCAPAR CARACERES ESPECIALES
-   80  echo "4*2>10 es falso"
-   81  echo $5
-   82  echo 'El precio total es de $5'
-   83  #ME UTILIZO EL VALOR LITERAL
-   84  echo 4*2>10 es falso
-   85  cat 10
-   86  #ME ASIGNO EL VALOR DEL STRING A UNA VARIABLE 10
-   87  env | STD
-   88  env | grep STD
-   89  set  | grep STD
-   90  env | less 
-   91  echo $?
-   92  #SE UTILIZA EL COMANDO ANTERIOR PARA VER SI EL SCRIPT ANTERIOR DIO ERROR ALGUNO
-   93  ls && mkdir tmp2
-   94  # EL && INIDICA QUE SE TIENE QUE CUMPLIR SI O SI LAS DOS SENTENCIAS
-   95  cp algo /tmp
-   96  cp algo /tmp && mkdir tmp3
-   97  cp algo /tmp 2> /tmp/error && mkdir tmp3
-   98  ## ME EJECUTA EL PRIMERO PERO LA SALIDA ME LA MANDA AL STANDAR DE EROOR
-   99  cat /tmp/error
-  100  cp algo /tmp 2> /tmp/error.log && mkdir tmp3
-  101  cat /tmp/error.log
-  102  ls
-  103  cp algo /tmp 2> ./error.log && mkdir tmp3
-  104  ls
-  105  cat error.log 
-  106  vim error.log 
-  107  pstree | less
-  108  pstree 
-  109  yum install pstree
-  110  pstree
-  111  netstat -na | less 
-  112  watch -n 1 "dmesg | tail"
-  113  #EL COMANDO ANTERIOR ME EJECUTA UN COMANDO CADA CIERTO TIEMPO
-  114  ps aux
-  115  #COMANDO UTILIZADO PARA MATAR LOS PROCESOS ACTIVOS
-  116  #kill -9 XXX
-  117  cat .bashrc
-  118  cat /proc/meminfo
-  119  #INFOAMCION ESPECIFICA DE LA MEMORIA
-  120  free
-  121  free -lh
-  122  #INFOMACION DE LA MEMORIA LIBRE EN UN FORMATO MAS LEGIBLE
-  123  yum install install htop
-  124  htop
-  125  #FORMA MUY GRAFICA PARA VER PROCESOS CORRIENDO EN TIEMPO REAL
-  126  htop
-  127  yop
-  128  top
-  129  #iftop  ES OTRA HERRAMIENTA MUY BUENA PARA EL MONITOREO DE PROCESOS
-  130  jobs
-  131  #JOBS LISTA LOS PROCESOS YA SE QUE ESTEN CORRIENDO EN PRIMER O SEGUNDO PLANO
-  132  cd /etc/apache2/sites-available/
-  133  cd
-  134  cd /etc/
-  135  ls
-  136  cd /etc/apache2/sites-available/
-  137  #cat 000-default.conf | grep -v "#" , ESTE COMANDO ME HACE UN FILTRO INVERSO DEL COMANDO GREP
-  138  #pushd  y popd, SON COMANDOS PARA AGREGAR UNA PILA DE DIRECTORIOS QUE YO PUEDO UTILIZAR A LA MANO, NO IMPORTANDO DONDE ME ENCUENTRE
-  139  yes hola
-  140  #yes hola > /dev/null, ESTE COMANDO ME MANDA LA SALIDA A UN "AGUJERO NEGRO" DONDE LA DATA SE PIERDE DEL TODO
-  141  ps aux | grep sshd
-  142  #ps aux | grep sshd , ME MUESTRA UNA INSTANTANEA DE LOS PROCESOS JUNTO CON EL USUARIO QUE LOS EJECUTA
-  143  #INICIAR UN DEMON sudo service sshd start 
-  144  ps -a | grep ping 
-  145   ps -a | grep ping  | cut -d " " -f1
-  146  ping 127.0.0.1
-  147  ping 127.0.0.1 &
-  148  ps
-  149  kill -9 23369
-  150  ping 127.0.0.1 &
-  151  ps
-  152  kill -9
-  153  kill -9 23391
-  154  ping host>/dev/null &
-  155  ps
-  156  ping 127.0.0.1>/dev/null &
-  157  #SE PONE A CORRER PROCESO EN SEGUNDO PLANO
-  158  ps -a | grep ping
-  159  #TENGO ESTE PROCESO ACTIVO
-  160   ps -a | grep ping  | cut -d " " -f1
-  161   cut -d " " -f1
-  162  # cut -d " " -f1
-  163  # cut -d " " -f1 , ESTE COMANDO ME DEFINE UN DELIMITADOR , PARA QUE ME IMPRIMA SOLAMENTE EL PROCESO
-  164  PID_MASTER=`ps -a | grep ping  | cut -d " " -f2`
-  165  echo $PID_MASTER
-  166  pgrep ping
-  167  #pgrep ping, ESTE COMANDO ME SIMPLIFICA EL USO DE FILTROS
-  168  PID_MASTER=`pgrep ping`
-  169  echo $PID_MASTER
-  170  ps
-  171  kill -9 $PID_MASTER
-  172  ps
-  173  #AQUI ME INDICA QUE EL PROCESO HA SIDO MATADO
-  174  #
-  175  [1]+  Killed                  ping 127.0.0.1 > /dev/null
-  176  #[1]+  Killed                  ping 127.0.0.1 > /dev/null
-  177  jobs
-  178  ping 127.0.0.1>/dev/null &
-  179  sudo renice -n -5 -p `pgrep ping`
-  180   ps -l
-  181  #CON EL COMANDO ANTERIOR LE CAMBIO EL VALOR DE PRIORIDAD AL PROCESO
-  182  #4 S     0 23499 21210  0  75  -5 - 28596 skb_re pts/2    00:00:00 ping
-  183  CD
-  184  cd
-  185  ls /proc/
-  186  ls /proc/irq/
-  187  #imprime valores procesos activos respecto a la señalizacion IRQ 
-  188  ls /proc/
-  189  #ls /proc/, MUESTRA INFORMACION RELACIONADA AL PROCESADOR , Y ELEMENTOS QUE CORRE EN UNTIEMPO ESPECIFICO
-  190  cd Proyecto-de-Programacion/
-  191  history > VALIDACIONHISTORY/history-$HOSTNAME-`date +%Y%m%d`+2
+    1  history 
+    2  #VER LA VERSION DE SHELL QUE TENGO
+    3  echo $SHELL
+    4  echo $BASH_VERSION
+    5  echo $BASH_VERSION | head
+    6  echo $BASH_VERSION | cut -d "(" -f1
+    7  #EN EL COMANDO ANTERIOR CORTAMOS LA SALIDA ESTANDAR DEFINIENDO "(" COMO DELIMITADOR
+    8  cd .
+    9  cd ..
+   10  ls
+   11  cd src/
+   12  ls
+   13  cd ..
+   14  ls
+   15  cd Proyecto
+   16  cd src/
+   17  ls
+   18  #PROCEDEMOS A CAMBIAR LOS PERMISOS DE LECTURA
+   19  ls
+   20  ./exit-codes.sh 
+   21  hmod 750 exit-codes.sh 
+   22  chmod 750 exit-codes.sh 
+   23  ls -l
+   24  ./exit-codes.sh 
+   25  echo $?
+   26  vim exit-codes.sh 
+   27  #A PESAR DE EXISTIR UN ERROR EVIDENTE , AL FINAL DEL CAMOANDO SE LE ESPECIFICA QUE ME RETORNE UN 0 COMO CONCLUSION AFIRMATIVA DEL COMANDO
+   28  vim variables-01.sh 
+   29  ls
+   30  chmod 750 resumen.sh 
+   31  ls
+   32  /resumen.sh 
+   33  chmod 750  *.sh
+   34  ls
+   35  ./resumen.sh 
+   36  echo $BASH_VERSION | cut -d "(" -f1` == $VERSION_BASH
+   37  echo $BASH_VERSION | cut -d "(" -f1` == $VERSION_BASH 
+   38  echo $BASH_VERSION echo $BASH_VERSION 
+   39  echo $BASH_VERSION | cut -d "(" -f1`
+   40  echo $BASH_VERSION | cut -d "(" -f1` == $VERSION_BASH || 
+   41  `echo $BASH_VERSION | cut -d "(" -f1` == $VERSION_BASH ||  `lsb_release -i  | awk '{print $3}'` == Ubuntu 
+   42  lsb_release -i
+   43  ./resumen.sh cosa1 cosa2 cosa3
+   44  lsb_release -r
+   45  lsb_release
+   46  cd
+   47  lsb_release
+   48  lsb_release -i  | awk '{print $3}'
+   49  lsb_release -rs
+   50  ç
+   51  echo $BASH_VERSION 
+   52  #EL SCRIPT resumen.sh, me indica si la version y la distribucion son las que tengo en mi maquina , indcar que es compatible, y validar si laca antidad de parametros ingresados es correcta
+   53  cd Proyecto-de-Programacion/
+   54  cd src/
+   55  ls
+   56  ./distros.sh 
+   57  #AL UTILIZAR UN CENTOS INDICA QUE NO ES SOPORTADA
+   58  history > VALIDACIONHISTORY/history-$HOSTNAME-`date +%Y%m%d`+3
+   59  cd ..
+   60  history > VALIDACIONHISTORY/history-$HOSTNAME-`date +%Y%m%d`+2
